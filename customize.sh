@@ -13,6 +13,3 @@ sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' openwrt/package/lean/default-se
 
 #3. Replace with JerryKuKu’s Argon
 rm openwrt/package/lean/luci-theme-argon -rf
-
-# Disable IPV6 ula prefix
-sed -i 's/^[^#].*option ula/#&/' /etc/config/network
