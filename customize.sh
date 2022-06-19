@@ -16,7 +16,3 @@ rm openwrt/package/lean/luci-theme-argon -rf
 
 # Disable IPV6 ula prefix
 sed -i 's/^[^#].*option ula/#&/' /etc/config/network
-
-# Add date version
-export DATE_VERSION=$(date -d "$(rdate -n -4 -p pool.ntp.org)" +'%Y-%m-%d')
-sed -i "s/%C/%C (${DATE_VERSION})/g" package/base-files/files/etc/openwrt_release
